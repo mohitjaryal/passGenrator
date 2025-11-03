@@ -7,6 +7,12 @@ def passGen(length):
     password = ''.join(random.choice(chars) for _ in range(length))
     return password
 
-# User input
-length = int(input("Enter password length: "))
-print("Your password is:", passGen(length))
+
+try:
+    length = int(input("Enter password length: "))
+    if length < 4:
+        print("Password length should be at least 4 characters.")
+    else:
+        print("Your password is:", passGen(length))
+except ValueError:
+    print("Please enter a valid number.")
