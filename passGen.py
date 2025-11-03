@@ -10,7 +10,7 @@ def passGen(length):
 
 try:
     # User input
-    length = int(input("Enter password length: "))
+    length = int(input("Enter password length : "))
     if length < 4:
         print("Password length should be at least 4 characters.")
     else:
